@@ -1,0 +1,83 @@
+<div style='font-family: Arial; font-size: 36px; color:purple'>{{Inglés}} / {{Portugués}} / {{Español}}</div>
+
+<div style='font-family: MS Mincho, Arial; font-size: 48px; color:red'>{{Kanji}}</div>
+
+<hr id="answer">
+<div style='color:green'>{{Furigana}}</div>
+<div style='color:purple'>{{JapaneseExample}}</div>
+<hr>
+
+<div style='color:#2B65EC'>{{Hanzi}}<br></div>
+<button onclick="document.getElementById('zh').style.display = 'block';">Chinese</button>
+<div style='color:red'><div id="zh" style="display:none;">{{Pinyin}}<div style='color:purple'>{{ChineseExample}}</div></div>
+</div>
+<hr>
+
+<div style='color:orange'>{{Hanja}}<br></div>
+<button onclick="document.getElementById('ko').style.display = 'block';">Korean</button>
+<div style='color:#FC6C85'><div id="ko" style="display:none;">{{Bareum}}<div style='color:purple'>{{KoreanExample}}</div></div>
+</div>
+<hr>
+
+<button onclick="document.getElementById('vo').style.display = 'block';" style="background-color: green;">
+    <div style='color: purple; font-weight: bold; font-size: 30px;'>語彙</div>
+</button>
+
+<style>
+    button {
+        background-color: green !important;
+    }
+</style>
+
+<!-- EnglishExample (Posición debajo del botón 語彙 sin presionarlo)-->
+
+<div style='color:#FC6C85'>
+    <div id="vo" style="display:none;">
+
+
+<div style='font-family: Arial; font-size: 16px; color:#6B65EC;'><div style='color:purple; font-size: 10px'>&nbsp</div>{{EnglishExample}}</div>
+
+<div style='font-family: Arial; font-size: 16px; color:green;'><div style='color:purple; font-size: 10px'>&nbsp</div>{{PortugueseExample}}</div>
+
+<div style='font-family: Arial; font-size: 16px; color:red;'><div style='color:purple; font-size: 10px'>&nbsp</div>{{SpanishExample}}</div>
+
+<div style='font-family: Arial; font-size: 16px; color:#2B65EC;'><div style='color:purple; font-size: 10px'>&nbsp</div>{{Synonyms}}</div>
+
+<div style='font-family: Arial; font-size: 16px; color:brown;'><div style='color:purple; font-size: 10px'>&nbsp</div>{{Vocabulario}}</div>
+
+<div style='color:purple; font-size: 10px'>&nbsp</div>
+
+{{Number}}
+
+    </div>
+</div>
+
+
+
+
+<script>
+    window.onkeyup = function(e) {
+        var key = e.keyCode ? e.keyCode : e.which;
+        if (key == 90) { // tecla 'z' para el botón con ID 'zh'
+            if (document.getElementById('zh').style.display == 'none') {
+                document.getElementById('zh').style.display = '';
+            } else {
+                document.getElementById('zh').style.display = 'none';
+            }
+        } else if (key == 88) { // tecla 'x' para el botón con ID 'ko'
+            if (document.getElementById('ko').style.display == 'none') {
+                document.getElementById('ko').style.display = '';
+            } else {
+                document.getElementById('ko').style.display = 'none';
+            }
+        } else if (key == 67) { // tecla 'c' para el botón con ID 'vo'
+            if (document.getElementById('vo').style.display == 'none') {
+                document.getElementById('vo').style.display = '';
+            } else {
+                document.getElementById('vo').style.display = 'none';
+            }
+        }
+    }
+</script>
+
+
