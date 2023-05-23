@@ -1,0 +1,10 @@
+Hanzi
+Pinyin
+Kanji
+Furigana
+Hanja
+Bareum
+Inglés
+Portugués
+Español
+Number
